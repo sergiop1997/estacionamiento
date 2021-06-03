@@ -17,15 +17,15 @@
     </header>
     <main>
       <div class="content-form">
-        <form>
-          <h2>AGREGAR VEHICULO</h2>
+        <form id="formulario">
+          <h2 class="titulo-form">AGREGAR VEHICULO</h2>
           <div class="input-field">
             <label for="placa">Nombre propietario</label>
             <input
               type="text"
               class="campo-field"
               name="nombre"
-              placeholder="Ingrese la placa"
+              placeholder="Ingrese el nombre"
             />
           </div>
           <div class="input-field">
@@ -52,7 +52,23 @@
               value="Guardar"
             />
           </div>
+          <div class="error"></div>
+          <div class="guardado">Guardado con exito!!</div>
+          <input type="hidden" name="id" />
         </form>
+
+        <div class="content-cupos">
+          <div class="cupos">
+            <h5>Cupo Maximo</h5>
+            <p class="cupo-maximo-carros">Carros: 20</p>
+            <p class="cupo-maximo-motos">Motos: 15</p>
+          </div>
+          <div class="cupos">
+            <h5>Cupos Disponibles</h5>
+            <p class="cupos-carros"></p>
+            <p class="cupos-motos"></p>
+          </div>
+        </div>
       </div>
       <div class="content-table">
         <table class="table">
@@ -68,101 +84,26 @@
               <th scope="col">Eliminar</th>
             </tr>
           </thead>
-          <tbody id="tabla">
-            <tr>
-              <td>1242</td>
-              <td>Sergio Perez</td>
-              <td>XXX-CDE</td>
-              <td>Carro</td>
-              <td>23:34</td>
-              <td>$200</td>
-              <td><button class="btn btn-editar">Editar</button></td>
-              <td><button class="btn btn-eliminar">Eliminar</button></td>
-            </tr>
-            <tr>
-              <td>1242</td>
-              <td>Sergio Perez</td>
-              <td>XXX-CDE</td>
-              <td>Carro</td>
-              <td>23:34</td>
-              <td>$200</td>
-              <td><button class="btn btn-editar">Editar</button></td>
-              <td><button class="btn btn-eliminar">Eliminar</button></td>
-            </tr>
-            <tr>
-              <td>1242</td>
-              <td>Sergio Perez</td>
-              <td>XXX-CDE</td>
-              <td>Carro</td>
-              <td>23:34</td>
-              <td>$200</td>
-              <td><button class="btn btn-editar">Editar</button></td>
-              <td><button class="btn btn-eliminar">Eliminar</button></td>
-            </tr>
-            <tr>
-              <td>1242</td>
-              <td>Sergio Perez</td>
-              <td>XXX-CDE</td>
-              <td>Carro</td>
-              <td>23:34</td>
-              <td>$200</td>
-              <td><button class="btn btn-editar">Editar</button></td>
-              <td><button class="btn btn-eliminar">Eliminar</button></td>
-            </tr>
-            <tr>
-              <td>1242</td>
-              <td>Sergio Perez</td>
-              <td>XXX-CDE</td>
-              <td>Carro</td>
-              <td>23:34</td>
-              <td>$200</td>
-              <td><button class="btn btn-editar">Editar</button></td>
-              <td><button class="btn btn-eliminar">Eliminar</button></td>
-            </tr>
-            <tr>
-              <td>1242</td>
-              <td>Sergio Perez</td>
-              <td>XXX-CDE</td>
-              <td>Carro</td>
-              <td>23:34</td>
-              <td>$200</td>
-              <td><button class="btn btn-editar">Editar</button></td>
-              <td><button class="btn btn-eliminar">Eliminar</button></td>
-            </tr>
-            <tr>
-              <td>1242</td>
-              <td>Sergio Perez</td>
-              <td>XXX-CDE</td>
-              <td>Carro</td>
-              <td>23:34</td>
-              <td>$200</td>
-              <td><button class="btn btn-editar">Editar</button></td>
-              <td><button class="btn btn-eliminar">Eliminar</button></td>
-            </tr>
-            <tr>
-              <td>1242</td>
-              <td>Sergio Perez</td>
-              <td>XXX-CDE</td>
-              <td>Carro</td>
-              <td>23:34</td>
-              <td>$200</td>
-              <td><button class="btn btn-editar">Editar</button></td>
-              <td><button class="btn btn-eliminar">Eliminar</button></td>
-            </tr>
-            <tr>
-              <td>1242</td>
-              <td>Sergio Perez</td>
-              <td>XXX-CDE</td>
-              <td>Carro</td>
-              <td>23:34</td>
-              <td>$200</td>
-              <td><button class="btn btn-editar">Editar</button></td>
-              <td><button class="btn btn-eliminar">Eliminar</button></td>
-            </tr>
-          </tbody>
+          <tbody id="tabla"></tbody>
         </table>
+        <div class="content-paginacion">
+          <button class="btn-anterior">Anterior</button>
+          <button class="btn-siguiente">Siguiente</button>
+        </div>
       </div>
     </main>
-    <script src="./script/index.js"></script>
+    <template id="template-datos">
+      <tr>
+        <td>1242</td>
+        <td>Sergio Perez</td>
+        <td>XXX-CDE</td>
+        <td>Carro</td>
+        <td>23:34</td>
+        <td>$200</td>
+        <td><button class="btn btn-editar">Editar</button></td>
+        <td><button class="btn btn-eliminar">Eliminar</button></td>
+      </tr>
+    </template>
+    <script src="./script/index.js" type="module"></script>
   </body>
 </html>

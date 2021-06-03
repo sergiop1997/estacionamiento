@@ -24,20 +24,23 @@ header {
 }
 main {
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   min-width: 90vh;
+  flex-wrap: wrap;
 }
 
 .content-form {
-  width: 35%;
-  display: flex;
+  /* width: 35%; */
+  /* display: flex; */
   padding: 30px 0px;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 form {
-  width: 80%;
-  min-width: 300px;
-  max-height: 370px;
+  /* width: 80%; */
+  /* min-width: 300px; */
+  /* max-height: 400px; */
   padding: 20px;
   border-radius: 10px;
   border: 1px #b195b8 solid;
@@ -63,6 +66,7 @@ form h2 {
 .campo-field {
   padding: 8px;
   width: 100%;
+  min-width: 320px;
   border-radius: 8px;
   outline: none;
   border-radius: 5px;
@@ -92,12 +96,12 @@ form h2 {
 }
 
 .content-table {
-  width: 70%;
-  display: flex;
+  /* width: 70%; */
+  /* display: flex; */
   padding: 30px 0px;
-  align-items: flex-start;
+  /* align-items: flex-start; */
 
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 table,
@@ -117,4 +121,70 @@ th {
 th,
 td {
   border-bottom: 1px solid;
+}
+
+.error {
+  margin: 15px;
+  font-size: 20px;
+  background-color: red;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+}
+
+.guardado {
+  margin: 15px;
+  font-size: 20px;
+  background-color: green;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+}
+
+.content-cupos {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cupos {
+  margin: 10px auto;
+  padding: 14px;
+  border-radius: 8px;
+  /* background-color: red; */
+  border: 1px solid #534b62;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+.cupos h5 {
+  font-size: 20px;
+}
+
+.cupos-carros,
+.cupos-motos,
+.cupo-maximo-carros,
+.cupo-maximo-motos {
+  font-size: 20px;
+  padding: 12px;
+  margin-top: 5px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #d0bcd5b2;
+}
+
+.content-paginacion {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-anterior,
+.btn-siguiente {
+  padding: 8px;
+  margin: 3px;
 }
