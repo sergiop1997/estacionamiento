@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Estacionamiento de sergio</title>
+  </head>
+  <body>
+    <header>
+      <h1>Parqueadero de Sergio</h1>
+    </header>
+    <main>
+      <div class="content-form">
+        <form>
+          <h2>AGREGAR VEHICULO</h2>
+          <div class="input-field">
+            <label for="placa">Nombre propietario</label>
+            <input
+              type="text"
+              class="campo-field"
+              name="nombre"
+              placeholder="Ingrese la placa"
+            />
+          </div>
+          <div class="input-field">
+            <label for="placa">Placa</label>
+            <input
+              type="text"
+              class="campo-field"
+              name="placa"
+              placeholder="Ingrese la placa"
+            />
+          </div>
+          <div class="input-field">
+            <label for="tipo">Tipo vehiculo:</label>
+            <select class="campo-field" name="tipo">
+              <option value="">Seleccionar</option>
+              <option value="moto">Moto</option>
+              <option value="carro">Carro</option>
+            </select>
+          </div>
+          <div class="input-field">
+            <input
+              class="campo-field btn-guardar"
+              type="submit"
+              value="Guardar"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="content-table">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Propietario</th>
+              <th scope="col">Placa</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Hora entrada</th>
+              <th scope="col">Precio/Hora</th>
+              <th scope="col">Editar</th>
+              <th scope="col">Eliminar</th>
+            </tr>
+          </thead>
+          <tbody id="tabla">
+            <tr>
+              <td>1242</td>
+              <td>Sergio Perez</td>
+              <td>XXX-CDE</td>
+              <td>Carro</td>
+              <td>23:34</td>
+              <td>$200</td>
+              <td><button class="btn btn-editar">Editar</button></td>
+              <td><button class="btn btn-eliminar">Eliminar</button></td>
+            </tr>
+            <tr>
+              <td>1242</td>
+              <td>Sergio Perez</td>
+              <td>XXX-CDE</td>
+              <td>Carro</td>
+              <td>23:34</td>
+              <td>$200</td>
+              <td><button class="btn btn-editar">Editar</button></td>
+              <td><button class="btn btn-eliminar">Eliminar</button></td>
+            </tr>
+            <tr>
+              <td>1242</td>
+              <td>Sergio Perez</td>
+              <td>XXX-CDE</td>
+              <td>Carro</td>
+              <td>23:34</td>
+              <td>$200</td>
+              <td><button class="btn btn-editar">Editar</button></td>
+              <td><button class="btn btn-eliminar">Eliminar</button></td>
+            </tr>
+            <tr>
+              <td>1242</td>
+              <td>Sergio Perez</td>
+              <td>XXX-CDE</td>
+              <td>Carro</td>
+              <td>23:34</td>
+              <td>$200</td>
+              <td><button class="btn btn-editar">Editar</button></td>
+              <td><button class="btn btn-eliminar">Eliminar</button></td>
+            </tr>
+            <tr>
+              <td>1242</td>
+              <td>Sergio Perez</td>
+              <td>XXX-CDE</td>
+              <td>Carro</td>
+              <td>23:34</td>
+              <td>$200</td>
+              <td><button class="btn btn-editar">Editar</button></td>
+              <td><button class="btn btn-eliminar">Eliminar</button></td>
+            </tr>
+            <tr>
+              <td>1242</td>
+              <td>Sergio Perez</td>
+              <td>XXX-CDE</td>
+              <td>Carro</td>
+              <td>23:34</td>
+              <td>$200</td>
+              <td><button class="btn btn-editar">Editar</button></td>
+              <td><button class="btn btn-eliminar">Eliminar</button></td>
+            </tr>
+            <tr>
+              <td>1242</td>
+              <td>Sergio Perez</td>
+              <td>XXX-CDE</td>
+              <td>Carro</td>
+              <td>23:34</td>
+              <td>$200</td>
+              <td><button class="btn btn-editar">Editar</button></td>
+              <td><button class="btn btn-eliminar">Eliminar</button></td>
+            </tr>
+            <tr>
+              <td>1242</td>
+              <td>Sergio Perez</td>
+              <td>XXX-CDE</td>
+              <td>Carro</td>
+              <td>23:34</td>
+              <td>$200</td>
+              <td><button class="btn btn-editar">Editar</button></td>
+              <td><button class="btn btn-eliminar">Eliminar</button></td>
+            </tr>
+            <tr>
+              <td>1242</td>
+              <td>Sergio Perez</td>
+              <td>XXX-CDE</td>
+              <td>Carro</td>
+              <td>23:34</td>
+              <td>$200</td>
+              <td><button class="btn btn-editar">Editar</button></td>
+              <td><button class="btn btn-eliminar">Eliminar</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script src="./script/index.js"></script>
+  </body>
+</html>

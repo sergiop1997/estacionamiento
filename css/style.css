@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+header {
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  background-color: #d0bcd5b2;
+  justify-content: center;
+}
+main {
+  display: flex;
+  min-width: 90vh;
+}
+
+.content-form {
+  width: 35%;
+  display: flex;
+  padding: 30px 0px;
+  justify-content: center;
+}
+
+form {
+  width: 80%;
+  min-width: 300px;
+  max-height: 370px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px #b195b8 solid;
+  background-color: #d0bcd5b2;
+  box-shadow: 2px 4px 20px #b195b8;
+}
+
+form h2 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.input-field {
+  margin: 15px;
+}
+
+.input-field label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1.2rem;
+}
+
+.campo-field {
+  padding: 8px;
+  width: 100%;
+  border-radius: 8px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #534b62;
+}
+
+.btn-guardar {
+  background-color: blue;
+  color: white;
+}
+
+.btn {
+  outline: none;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+.btn-eliminar {
+  background-color: rgb(187, 29, 45);
+  color: white;
+}
+
+.btn-editar {
+  background-color: #ffc107;
+  color: white;
+}
+
+.content-table {
+  width: 70%;
+  display: flex;
+  padding: 30px 0px;
+  align-items: flex-start;
+
+  justify-content: center;
+}
+
+table,
+td,
+th {
+  border-collapse: collapse;
+  /* border: 1px solid black; */
+  margin: 0;
+  text-align: center;
+  padding: 7px 10px;
+}
+
+th {
+  font-size: 22px;
+}
+
+th,
+td {
+  border-bottom: 1px solid;
+}
